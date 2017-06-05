@@ -12,6 +12,8 @@
 		341294CC1EE23EE50040ED69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341294CA1EE23EE50040ED69 /* Main.storyboard */; };
 		341294CE1EE23EE50040ED69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341294CD1EE23EE50040ED69 /* Assets.xcassets */; };
 		341294D11EE23EE50040ED69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341294CF1EE23EE50040ED69 /* LaunchScreen.storyboard */; };
+		341294DB1EE243A50040ED69 /* TarefaBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341294DA1EE243A50040ED69 /* TarefaBusiness.swift */; };
+		341294DD1EE24DA10040ED69 /* TarefaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341294DC1EE24DA10040ED69 /* TarefaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		341294CD1EE23EE50040ED69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		341294D01EE23EE50040ED69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341294D21EE23EE50040ED69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		341294DA1EE243A50040ED69 /* TarefaBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaBusiness.swift; sourceTree = "<group>"; };
+		341294DC1EE24DA10040ED69 /* TarefaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 				341294C61EE23EE50040ED69 /* AppDelegate.swift */,
 				341294C81EE23EE50040ED69 /* ViewController.swift */,
 				341294CA1EE23EE50040ED69 /* Main.storyboard */,
+				341294DA1EE243A50040ED69 /* TarefaBusiness.swift */,
 				341294CD1EE23EE50040ED69 /* Assets.xcassets */,
 				341294CF1EE23EE50040ED69 /* LaunchScreen.storyboard */,
 				341294D21EE23EE50040ED69 /* Info.plist */,
+				341294DC1EE24DA10040ED69 /* TarefaViewController.swift */,
 			);
 			path = "Lista de Tarefas";
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				341294C91EE23EE50040ED69 /* ViewController.swift in Sources */,
+				341294DB1EE243A50040ED69 /* TarefaBusiness.swift in Sources */,
 				341294C71EE23EE50040ED69 /* AppDelegate.swift in Sources */,
+				341294DD1EE24DA10040ED69 /* TarefaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
