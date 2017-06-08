@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class LocalizacaoFixaViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapa: MKMapView!
     
@@ -40,7 +40,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		346AD0B31EE627A9006D6D80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346AD0B21EE627A9006D6D80 /* AppDelegate.swift */; };
-		346AD0B51EE627A9006D6D80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346AD0B41EE627A9006D6D80 /* ViewController.swift */; };
+		346AD0B51EE627A9006D6D80 /* LocalizacaoFixaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346AD0B41EE627A9006D6D80 /* LocalizacaoFixaViewController.swift */; };
 		346AD0B81EE627A9006D6D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346AD0B61EE627A9006D6D80 /* Main.storyboard */; };
 		346AD0BA1EE627A9006D6D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346AD0B91EE627A9006D6D80 /* Assets.xcassets */; };
 		346AD0BD1EE627A9006D6D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346AD0BB1EE627A9006D6D80 /* LaunchScreen.storyboard */; };
+		34D75C531EE8CDE00065F1DE /* LocalizacaoUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D75C521EE8CDE00065F1DE /* LocalizacaoUsuarioViewController.swift */; };
+		34D75C561EE8CF690065F1DE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D75C551EE8CF690065F1DE /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		346AD0AF1EE627A9006D6D80 /* Trabalhando com Mapas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trabalhando com Mapas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		346AD0B21EE627A9006D6D80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		346AD0B41EE627A9006D6D80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		346AD0B41EE627A9006D6D80 /* LocalizacaoFixaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoFixaViewController.swift; sourceTree = "<group>"; };
 		346AD0B71EE627A9006D6D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		346AD0B91EE627A9006D6D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		346AD0BC1EE627A9006D6D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		346AD0BE1EE627A9006D6D80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D75C521EE8CDE00065F1DE /* LocalizacaoUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizacaoUsuarioViewController.swift; sourceTree = "<group>"; };
+		34D75C551EE8CF690065F1DE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D75C561EE8CF690065F1DE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				346AD0B11EE627A9006D6D80 /* Trabalhando com Mapas */,
 				346AD0B01EE627A9006D6D80 /* Products */,
+				34D75C541EE8CF690065F1DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +61,22 @@
 			isa = PBXGroup;
 			children = (
 				346AD0B21EE627A9006D6D80 /* AppDelegate.swift */,
-				346AD0B41EE627A9006D6D80 /* ViewController.swift */,
+				346AD0B41EE627A9006D6D80 /* LocalizacaoFixaViewController.swift */,
+				34D75C521EE8CDE00065F1DE /* LocalizacaoUsuarioViewController.swift */,
 				346AD0B61EE627A9006D6D80 /* Main.storyboard */,
 				346AD0B91EE627A9006D6D80 /* Assets.xcassets */,
 				346AD0BB1EE627A9006D6D80 /* LaunchScreen.storyboard */,
 				346AD0BE1EE627A9006D6D80 /* Info.plist */,
 			);
 			path = "Trabalhando com Mapas";
+			sourceTree = "<group>";
+		};
+		34D75C541EE8CF690065F1DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34D75C551EE8CF690065F1DE /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				346AD0B51EE627A9006D6D80 /* ViewController.swift in Sources */,
+				346AD0B51EE627A9006D6D80 /* LocalizacaoFixaViewController.swift in Sources */,
+				34D75C531EE8CDE00065F1DE /* LocalizacaoUsuarioViewController.swift in Sources */,
 				346AD0B31EE627A9006D6D80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +317,7 @@
 				346AD0C31EE627A9006D6D80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
