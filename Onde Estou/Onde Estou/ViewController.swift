@@ -43,10 +43,54 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let localizacaoUsuario = locations.last!
         let latitute = localizacaoUsuario.coordinate.latitude
         let longitude = localizacaoUsuario.coordinate.longitude
+        let velocidade = localizacaoUsuario.speed
         
         latitudeLabel.text = String(latitute)
         longitudeLabel.text = String(longitude)
-        velocidadeLabel.text = String(localizacaoUsuario.speed)
+        
+        if velocidade > 0 {
+            velocidadeLabel.text = String(velocidade)
+        }
+        
+        atualizaPosicaoMapa(latitude: latitute, longitude: longitude)
+        atualizarEndereco(localizacaoReferencia: localizacaoUsuario)
+    }
+    
+    func atualizaPosicaoMapa(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
+        
+        let deltaLatitude = 0.01
+        let deltaLongitude = 0.01
+        
+        let localizacao: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let areaExibicao: MKCoordinateSpan = MKCoordinateSpanMake(deltaLatitude, deltaLongitude)
+        let regiao: MKCoordinateRegion = MKCoordinateRegionMake(localizacao, areaExibicao)
+        
+        mapa.setRegion(regiao, animated: true)
+    }
+    
+    func atualizarEndereco(localizacaoReferencia: CLLocation){
+        
+        CLGeocoder().reverseGeocodeLocation(localizacaoReferencia) { (detalhesLocal, erro) in
+            
+            if erro == nil {
+                let dadosLocal = detalhesLocal?.first
+                let rua = dadosLocal?.thoroughfare ?? ""
+                let numero = dadosLocal?.subThoroughfare ?? ""
+                let cidade = dadosLocal?.locality ?? ""
+                let bairro = dadosLocal?.subLocality ?? ""
+                let cep = dadosLocal?.postalCode ?? ""
+                let pais = dadosLocal?.country ?? ""
+                let uf = dadosLocal?.administrativeArea ?? ""
+                let estado = dadosLocal?.subAdministrativeArea ?? ""
+                
+                self.enderecoLabel.text = "\(rua) - \(numero) / \(cidade) / \(pais)"
+                
+            } else {
+                print(erro)
+            }
+            
+        }
+        
     }
     
     
