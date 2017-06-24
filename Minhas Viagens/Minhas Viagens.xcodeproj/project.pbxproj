@@ -13,6 +13,7 @@
 		341D35461EFA0F53007FDB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341D35451EFA0F53007FDB8A /* Assets.xcassets */; };
 		341D35491EFA0F53007FDB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341D35471EFA0F53007FDB8A /* LaunchScreen.storyboard */; };
 		341D35511EFA14B0007FDB8A /* LocaisViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341D35501EFA14B0007FDB8A /* LocaisViagemViewController.swift */; };
+		34A8CC231EFE9009008660B2 /* RepositorioViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8CC221EFE9009008660B2 /* RepositorioViagem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		341D35481EFA0F53007FDB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341D354A1EFA0F53007FDB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341D35501EFA14B0007FDB8A /* LocaisViagemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaisViagemViewController.swift; sourceTree = "<group>"; };
+		34A8CC221EFE9009008660B2 /* RepositorioViagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositorioViagem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				341D35451EFA0F53007FDB8A /* Assets.xcassets */,
 				341D35471EFA0F53007FDB8A /* LaunchScreen.storyboard */,
 				341D354A1EFA0F53007FDB8A /* Info.plist */,
+				34A8CC221EFE9009008660B2 /* RepositorioViagem.swift */,
 			);
 			path = "Minhas Viagens";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				341D35411EFA0F53007FDB8A /* ViewController.swift in Sources */,
 				341D353F1EFA0F53007FDB8A /* AppDelegate.swift in Sources */,
+				34A8CC231EFE9009008660B2 /* RepositorioViagem.swift in Sources */,
 				341D35511EFA14B0007FDB8A /* LocaisViagemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +309,7 @@
 				341D354F1EFA0F53007FDB8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

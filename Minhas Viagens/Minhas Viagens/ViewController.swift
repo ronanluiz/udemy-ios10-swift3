@@ -60,6 +60,13 @@ extension ViewController: MKMapViewDelegate {
                         }
                     }
                     
+                    // salvar dados da viagem
+                    var viagem: [String:String] = [:]
+                    viagem["local"] = localCompleto
+                    viagem["latitude"] = String(coordenadas.latitude)
+                    viagem["logitude"] = String(coordenadas.longitude)
+                    RepositorioLocalViagem().salvar(viagem: viagem)
+                    
                     // exibe a anotação com dados do endereço
                     let anotacao = MKPointAnnotation()
                     
