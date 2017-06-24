@@ -2,4 +2,99 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Minhas Viagens/LocaisViagemViewController.swift"
+            timestampString = "520001612.569727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "LocaisViagemViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minhas_Viagens.LocaisViagemViewController.locaisViagens.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Minhas Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ronan/workspace/estudo/udemy-ios10-swift3/Minhas%20Viagens/Minhas%20Viagens/LocaisViagemViewController.swift"
+                  timestampString = "520001613.673981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minhas_Viagens.LocaisViagemViewController.locaisViagens.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Minhas Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ronan/workspace/estudo/udemy-ios10-swift3/Minhas%20Viagens/Minhas%20Viagens/LocaisViagemViewController.swift"
+                  timestampString = "520001613.677738"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minhas_Viagens.LocaisViagemViewController.init (style : __C.UITableViewStyle) -&gt; Minhas_Viagens.LocaisViagemViewController"
+                  moduleName = "Minhas Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ronan/workspace/estudo/udemy-ios10-swift3/Minhas%20Viagens/Minhas%20Viagens/LocaisViagemViewController.swift"
+                  timestampString = "520001613.681018"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minhas_Viagens.LocaisViagemViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Minhas_Viagens.LocaisViagemViewController"
+                  moduleName = "Minhas Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ronan/workspace/estudo/udemy-ios10-swift3/Minhas%20Viagens/Minhas%20Viagens/LocaisViagemViewController.swift"
+                  timestampString = "520001613.684281"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minhas_Viagens.LocaisViagemViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Minhas_Viagens.LocaisViagemViewController&gt;"
+                  moduleName = "Minhas Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ronan/workspace/estudo/udemy-ios10-swift3/Minhas%20Viagens/Minhas%20Viagens/LocaisViagemViewController.swift"
+                  timestampString = "520001613.688061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

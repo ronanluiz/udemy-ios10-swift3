@@ -10,10 +10,14 @@ import UIKit
 
 class LocaisViagemViewController: UITableViewController {
 
-    var locaisViagens = ["Cristo Redentor", "Praia de Pipa", "Praia do Forno"]
+    var locaisViagens = [[String:String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        recarregarLocais()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,13 +32,21 @@ class LocaisViagemViewController: UITableViewController {
         let viagem = locaisViagens[indexPath.row]
         let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
         
-        celula.textLabel?.text = viagem
+        celula.textLabel?.text = viagem["local"]
         
         return celula
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            RepositorioLocalViagem().remove(indice: indexPath.row)
+            recarregarLocais()
+        }
+    }
+    
+    func recarregarLocais() {
+        
+        locaisViagens = RepositorioLocalViagem().listar()
+        tableView.reloadData()
     }
 }
