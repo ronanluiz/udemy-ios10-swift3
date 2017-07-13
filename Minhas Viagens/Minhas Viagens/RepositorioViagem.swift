@@ -16,7 +16,7 @@ class RepositorioLocalViagem {
         return UserDefaults.standard
     }
     
-    func salvar(viagem: [String:String]){
+    func salvar(_ viagem: [String:String]){
         
         var viagens = listar()
         

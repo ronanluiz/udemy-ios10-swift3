@@ -8,15 +8,28 @@
 
 import UIKit
 
-class LocaisViagemViewController: UITableViewController {
+enum controleNavegacao {
+    case listar
+    case adicionar
+}
 
-    var locaisViagens = [[String:String]]()
+class LocaisViagemViewController: UITableViewController {
+    
+    var locaisViagens: [Dictionary<String, String>]
+    var controleNavegacaoSelecionado: controleNavegacao
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.locaisViagens = []
+        self.controleNavegacaoSelecionado = .adicionar
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.controleNavegacaoSelecionado = .adicionar
         recarregarLocais()
     }
     
@@ -41,6 +54,34 @@ class LocaisViagemViewController: UITableViewController {
         if editingStyle == .delete {
             RepositorioLocalViagem().remove(indice: indexPath.row)
             recarregarLocais()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        controleNavegacaoSelecionado = .listar
+        // abre a tela de mapa passando o índice do item selecionado
+        performSegue(withIdentifier: "localMapa", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "localMapa" {
+            
+            let viewControllerDestino = segue.destination as! ViewController
+            
+            switch controleNavegacaoSelecionado {
+            case .listar:
+                if let indiceSelecionado = sender {
+                    
+                    let indice = indiceSelecionado as! Int
+                    viewControllerDestino.viagem = locaisViagens[indice]
+                    viewControllerDestino.indiceSelecionado = indice
+                }
+                break
+            default:
+                viewControllerDestino.viagem = [:]
+                viewControllerDestino.indiceSelecionado = nil
+                break
+            }
         }
     }
     
