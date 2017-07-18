@@ -12,7 +12,7 @@
         <!--Notas Diárias-->
         <scene sceneID="hct-hD-ITT">
             <objects>
-                <tableViewController id="4Th-H7-C3g" sceneMemberID="viewController">
+                <tableViewController id="4Th-H7-C3g" customClass="ListaAnotacaoTableViewController" customModule="Notas_Diarias" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gdm-A8-o0B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
         <!--Anotação-->
         <scene sceneID="vXG-2a-9gd">
             <objects>
-                <viewController title="Anotação" automaticallyAdjustsScrollViewInsets="NO" id="K2x-4k-Ulq" sceneMemberID="viewController">
+                <viewController title="Anotação" automaticallyAdjustsScrollViewInsets="NO" id="K2x-4k-Ulq" customClass="AnotacaoViewController" customModule="Notas_Diarias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mki-hr-FIo"/>
                         <viewControllerLayoutGuide type="bottom" id="mgv-Pl-7qv"/>
@@ -71,9 +71,16 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Adicionar" id="Jcg-IN-aH3">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="VXG-ar-BM1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="VXG-ar-BM1">
+                            <connections>
+                                <action selector="salvarAnotacao:" destination="K2x-4k-Ulq" id="Bd8-0e-j2P"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="texto" destination="X6V-o3-hS6" id="ZOg-az-dhD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPW-Q9-yUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +90,7 @@
         <scene sceneID="KYN-EG-ZvS">
             <objects>
                 <navigationController id="sXk-kQ-TW4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rq6-XY-KKp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rq6-XY-KKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
