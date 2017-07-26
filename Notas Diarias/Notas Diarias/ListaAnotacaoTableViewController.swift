@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class ListaAnotacaoTableViewController: UITableViewController {
 
+    var gerenciadorContexto: NSManagedObjectContext!
+    var anotacoes: [NSManagedObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        configurarContexto()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        recuperarAnotacoes()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +34,26 @@ class ListaAnotacaoTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return anotacoes.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
 
-        // Configure the cell...
-
+        let anotacao = anotacoes[indexPath.row]
+        let texto = anotacao.value(forKey: "texto") as? String
+        let formatacaoData = DateFormatter()
+        formatacaoData.dateFormat = "dd/MM/yyyy hh:mm"
+        let data = formatacaoData.string(from: anotacao.value(forKey: "data") as! Date)
+        
+        cell.textLabel?.text = texto
+        cell.detailTextLabel?.text = data
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +99,25 @@ class ListaAnotacaoTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func configurarContexto() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        gerenciadorContexto = appDelegate.persistentContainer.viewContext
+    }
+    
+    func recuperarAnotacoes() {
+        let requisicao = NSFetchRequest<NSFetchRequestResult>(entityName: "Anotacao")
+        
+        do {
+            
+            let anotacoesRecuperadas = try gerenciadorContexto.fetch(requisicao)
+            self.anotacoes = anotacoesRecuperadas as! [NSManagedObject]
+            
+            tableView.reloadData()
+            
+        } catch let error as NSError {
+            print("Erro ao tentar recuperar os dados: \(error.description)")
+        }
+    }
 
 }
