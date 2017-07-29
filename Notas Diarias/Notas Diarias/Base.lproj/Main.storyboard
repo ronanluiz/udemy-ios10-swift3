@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Notas Diárias" id="xbJ-Si-SEH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AC7-2z-2Lt">
                             <connections>
-                                <segue destination="K2x-4k-Ulq" kind="show" id="8Xl-yA-uUv"/>
+                                <segue destination="K2x-4k-Ulq" kind="show" identifier="verAnotacao" id="8Xl-yA-uUv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
