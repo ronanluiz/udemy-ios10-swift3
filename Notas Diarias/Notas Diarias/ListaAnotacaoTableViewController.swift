@@ -59,8 +59,20 @@ class ListaAnotacaoTableViewController: UITableViewController {
         // remove a seleção da célula
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let anotacaoSelecionada = anotacoes[indexPath.row] as? NSManagedObject
+        let anotacaoSelecionada = anotacoes[indexPath.row]
         performSegue(withIdentifier: "verAnotacao", sender: anotacaoSelecionada )
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                try excluir(indexPath.row)
+                // remove o item da tableView
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } catch let error {
+                print("Erro ao remover uma anotação: \(error.localizedDescription)")
+            }
+        }
     }
 
     // MARK: - Navigation
@@ -80,6 +92,8 @@ class ListaAnotacaoTableViewController: UITableViewController {
     
     func recuperarAnotacoes() {
         let requisicao = NSFetchRequest<NSFetchRequestResult>(entityName: "Anotacao")
+        let ordenacao = NSSortDescriptor(key: "data", ascending: false)
+        requisicao.sortDescriptors = [ordenacao]
         
         do {
             
@@ -90,6 +104,21 @@ class ListaAnotacaoTableViewController: UITableViewController {
             
         } catch let error as NSError {
             print("Erro ao tentar recuperar os dados: \(error.description)")
+        }
+    }
+    
+    func excluir(_ indice: Int) throws {
+        let anotacao = anotacoes[indice]
+        gerenciadorContexto.delete(anotacao)
+        
+        do {
+            // exclui do banco de dados
+            try gerenciadorContexto.save()
+            // exclui da lista
+            anotacoes.remove(at: indice)
+            
+        } catch let error {
+            throw error
         }
     }
 
