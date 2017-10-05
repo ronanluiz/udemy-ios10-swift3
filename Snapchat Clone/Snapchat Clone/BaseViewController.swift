@@ -13,6 +13,7 @@ enum CodigoErroAutenticacao: String {
     case SenhaFraca = "ERROR_WEAK_PASSWORD"
     case EmailEmUso = "ERROR_EMAIL_ALREADY_IN_USE"
     case SenhaInvalida = "ERROR_WRONG_PASSWORD"
+    case UsuarioNaoEncontrado = "ERROR_USER_NOT_FOUND"
     
     var descricao: String {
         switch self {
@@ -24,6 +25,8 @@ enum CodigoErroAutenticacao: String {
             return "Utilize no mínimo 6 caracteres para senha"
         case .SenhaInvalida:
             return "Senha inválida"
+        case .UsuarioNaoEncontrado:
+            return "Usuário não encontrado"
         }
     }
 }
