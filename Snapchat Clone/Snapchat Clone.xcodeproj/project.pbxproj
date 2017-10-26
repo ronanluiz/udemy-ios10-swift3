@@ -11,6 +11,7 @@
 		341366EB1F4665F50022ABED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341366EA1F4665F50022ABED /* HomeViewController.swift */; };
 		341366ED1F4666770022ABED /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341366EC1F4666770022ABED /* PrincipalViewController.swift */; };
 		341366EF1F466E930022ABED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 341366EE1F466E930022ABED /* GoogleService-Info.plist */; };
+		3417F21D1FA28B26003C224B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417F21C1FA28B26003C224B /* Alerta.swift */; };
 		348AF2FF1FA1661000B91856 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AF2FE1FA1661000B91856 /* SnapsViewController.swift */; };
 		348AF3031FA169A900B91856 /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AF3021FA169A900B91856 /* FotoViewController.swift */; };
 		34A01B771F85CC82003A2B45 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A01B761F85CC82003A2B45 /* BaseViewController.swift */; };
@@ -24,21 +25,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		341366E81F4665AE0022ABED /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
-		341366EA1F4665F50022ABED /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		341366EC1F4666770022ABED /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
+		341366E81F4665AE0022ABED /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastroViewController.swift; path = ../CadastroViewController.swift; sourceTree = "<group>"; };
+		341366EA1F4665F50022ABED /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
+		341366EC1F4666770022ABED /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrincipalViewController.swift; path = ../PrincipalViewController.swift; sourceTree = "<group>"; };
 		341366EE1F466E930022ABED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		348AF2FE1FA1661000B91856 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
-		348AF3021FA169A900B91856 /* FotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
-		34A01B761F85CC82003A2B45 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3417F21C1FA28B26003C224B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		348AF2FE1FA1661000B91856 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = ../SnapsViewController.swift; sourceTree = "<group>"; };
+		348AF3021FA169A900B91856 /* FotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FotoViewController.swift; path = ../FotoViewController.swift; sourceTree = "<group>"; };
+		34A01B761F85CC82003A2B45 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../BaseViewController.swift; sourceTree = "<group>"; };
 		34FC0F001F45308000C888BB /* Snapchat Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snapchat Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FC0F031F45308000C888BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34FC0F051F45308000C888BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34FC0F051F45308000C888BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		34FC0F081F45308000C888BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34FC0F0A1F45308000C888BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34FC0F0D1F45308000C888BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34FC0F0F1F45308000C888BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34FC0F151F45314B00C888BB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		34FC0F151F45314B00C888BB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		AD43D36213BFB62583DF2858 /* Pods-Snapchat Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat Clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat Clone/Pods-Snapchat Clone.release.xcconfig"; sourceTree = "<group>"; };
 		C4136710C828DA5EAA944CC9 /* Pods-Snapchat Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat Clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat Clone/Pods-Snapchat Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		DBAA9B309AC0979E04E47F9F /* Pods_Snapchat_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3417F21A1FA28ADA003C224B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				348AF3021FA169A900B91856 /* FotoViewController.swift */,
+				34FC0F051F45308000C888BB /* ViewController.swift */,
+				341366EA1F4665F50022ABED /* HomeViewController.swift */,
+				34FC0F151F45314B00C888BB /* LoginViewController.swift */,
+				341366E81F4665AE0022ABED /* CadastroViewController.swift */,
+				341366EC1F4666770022ABED /* PrincipalViewController.swift */,
+				348AF2FE1FA1661000B91856 /* SnapsViewController.swift */,
+				34A01B761F85CC82003A2B45 /* BaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3417F21B1FA28B0A003C224B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3417F21C1FA28B26003C224B /* Alerta.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		34FC0EF71F45308000C888BB = {
 			isa = PBXGroup;
 			children = (
@@ -77,15 +102,9 @@
 		34FC0F021F45308000C888BB /* Snapchat Clone */ = {
 			isa = PBXGroup;
 			children = (
-				348AF3021FA169A900B91856 /* FotoViewController.swift */,
+				3417F21B1FA28B0A003C224B /* Models */,
+				3417F21A1FA28ADA003C224B /* Controllers */,
 				34FC0F031F45308000C888BB /* AppDelegate.swift */,
-				34FC0F051F45308000C888BB /* ViewController.swift */,
-				341366EA1F4665F50022ABED /* HomeViewController.swift */,
-				34FC0F151F45314B00C888BB /* LoginViewController.swift */,
-				341366E81F4665AE0022ABED /* CadastroViewController.swift */,
-				341366EC1F4666770022ABED /* PrincipalViewController.swift */,
-				348AF2FE1FA1661000B91856 /* SnapsViewController.swift */,
-				34A01B761F85CC82003A2B45 /* BaseViewController.swift */,
 				34FC0F071F45308000C888BB /* Main.storyboard */,
 				34FC0F0A1F45308000C888BB /* Assets.xcassets */,
 				34FC0F0C1F45308000C888BB /* LaunchScreen.storyboard */,
@@ -250,6 +269,7 @@
 				34FC0F061F45308000C888BB /* ViewController.swift in Sources */,
 				348AF3031FA169A900B91856 /* FotoViewController.swift in Sources */,
 				341366ED1F4666770022ABED /* PrincipalViewController.swift in Sources */,
+				3417F21D1FA28B26003C224B /* Alerta.swift in Sources */,
 				34FC0F041F45308000C888BB /* AppDelegate.swift in Sources */,
 				34A01B771F85CC82003A2B45 /* BaseViewController.swift in Sources */,
 				341366E91F4665AE0022ABED /* CadastroViewController.swift in Sources */,

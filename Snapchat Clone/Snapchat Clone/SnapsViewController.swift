@@ -9,17 +9,10 @@
 import UIKit
 import FirebaseAuth
 
-class SnapsViewController: UIViewController {
+class SnapsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func sair(_ sender: UIBarButtonItem) {
@@ -28,7 +21,8 @@ class SnapsViewController: UIViewController {
             try autenticacao.signOut()
             dismiss(animated: true, completion: nil)
         } catch {
-            print("Erro ao tentar deslogar.")
+            let alerta = Alerta(titulo: "Autenticação", mensagem: "Erro ao tentar deslogar.")
+            exibirMensagem(alerta: alerta)
         }
         
     }

@@ -40,4 +40,9 @@ class BaseViewController: UIViewController {
         alert.addAction(acaoCancelar)
         present(alert, animated: true, completion: nil)
     }
+    
+    func exibirMensagem(alerta: Alerta) {
+        let alert = alerta.getAlerta()
+        present(alert, animated: true, completion: nil)
+    }
 }

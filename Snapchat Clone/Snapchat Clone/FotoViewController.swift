@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseStorage
 
-class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class FotoViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let qualidadeImagem = CGFloat(0.5) // 50%
     let idImagem = NSUUID().uuidString
@@ -45,7 +45,8 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     print(metaDados?.downloadURL()?.absoluteURL)
                     
                 } else {
-                    print("Erro ao enviar a imagem")
+                    let alerta = Alerta(titulo: "Upload", mensagem: "Erro ao realizar o upload das imagens.")
+                    self.exibirMensagem(alerta: alerta)
                 }
                 
                 self.desabilitarCarregando()
