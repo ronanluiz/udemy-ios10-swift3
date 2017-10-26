@@ -85,7 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Snapchat" id="w1L-SU-QS0"/>
                     <connections>
-                        <segue destination="eDN-F1-2KG" kind="presentation" id="gdY-oE-CvE"/>
+                        <segue destination="eDN-F1-2KG" kind="presentation" identifier="loginAutomaticoSegue" id="7G8-gv-9jz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -266,10 +266,10 @@
             </objects>
             <point key="canvasLocation" x="2463" y="-916"/>
         </scene>
-        <!--Principal View Controller-->
+        <!--View Controller-->
         <scene sceneID="Bhu-xm-vTb">
             <objects>
-                <viewController id="eDN-F1-2KG" customClass="PrincipalViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eDN-F1-2KG" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IOq-8O-als"/>
                         <viewControllerLayoutGuide type="bottom" id="c0t-DC-VEj"/>
@@ -316,6 +316,6 @@
         <image name="logo" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Whs-8C-Snw"/>
+        <segue reference="7G8-gv-9jz"/>
     </inferredMetricsTieBreakers>
 </document>
