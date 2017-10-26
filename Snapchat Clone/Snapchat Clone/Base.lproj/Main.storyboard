@@ -333,6 +333,7 @@
                                 </state>
                                 <connections>
                                     <action selector="criarConta:" destination="Ajm-f6-aEt" eventType="touchUpInside" id="5ww-EB-vDV"/>
+                                    <action selector="executarProximo:" destination="BdU-bc-TZz" eventType="touchUpInside" id="jS7-WO-D57"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -357,6 +358,7 @@
                     <connections>
                         <outlet property="descricaoText" destination="mHU-ex-3g9" id="nd9-pI-yI2"/>
                         <outlet property="fotoImageView" destination="B1H-PB-woA" id="oXN-Pq-l3N"/>
+                        <outlet property="proximoButton" destination="dFE-IU-utb" id="y1i-OD-uR7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b38-L5-ERh" userLabel="First Responder" sceneMemberID="firstResponder"/>
