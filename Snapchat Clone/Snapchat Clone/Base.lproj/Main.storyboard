@@ -85,7 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Snapchat" id="w1L-SU-QS0"/>
                     <connections>
-                        <segue destination="eDN-F1-2KG" kind="presentation" identifier="loginAutomaticoSegue" id="7G8-gv-9jz"/>
+                        <segue destination="Yl6-oJ-ac6" kind="presentation" identifier="loginAutomaticoSegue" id="7G8-gv-9jz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@
                         <outlet property="email" destination="CAu-7J-NVs" id="9yW-2m-hnN"/>
                         <outlet property="senha" destination="4Yf-mc-r9a" id="Lsn-gW-pdR"/>
                         <outlet property="senhaConfirmacao" destination="FrX-3E-fQ7" id="ac6-gb-7X9"/>
-                        <segue destination="eDN-F1-2KG" kind="presentation" identifier="cadastroLoginSegue" id="Whs-8C-Snw"/>
+                        <segue destination="Yl6-oJ-ac6" kind="presentation" identifier="cadastroLoginSegue" id="Whs-8C-Snw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avy-9F-GSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,17 +259,17 @@
                     <connections>
                         <outlet property="emailText" destination="hmp-il-EVK" id="VYw-Vi-bF0"/>
                         <outlet property="senhaText" destination="lK7-pI-OkW" id="Z2M-QQ-SUD"/>
-                        <segue destination="eDN-F1-2KG" kind="presentation" identifier="loginSegue" id="dzO-zi-Eim"/>
+                        <segue destination="Yl6-oJ-ac6" kind="presentation" identifier="loginSegue" id="dzO-zi-Eim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gmu-Lh-MTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2463" y="-916"/>
         </scene>
-        <!--View Controller-->
+        <!--Snaps-->
         <scene sceneID="Bhu-xm-vTb">
             <objects>
-                <viewController id="eDN-F1-2KG" sceneMemberID="viewController">
+                <viewController id="eDN-F1-2KG" customClass="SnapsViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IOq-8O-als"/>
                         <viewControllerLayoutGuide type="bottom" id="c0t-DC-VEj"/>
@@ -277,21 +277,83 @@
                     <view key="view" contentMode="scaleToFill" id="n8I-H4-cEG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tela Principal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCM-z8-ypD">
-                                <rect key="frame" x="124" y="323" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Snaps" id="MmA-Id-rCD">
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="575-Ls-xHK">
+                            <connections>
+                                <action selector="sair:" destination="eDN-F1-2KG" id="2Gg-db-t1T"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="56K-uO-Cl4">
+                            <connections>
+                                <segue destination="BdU-bc-TZz" kind="show" id="RIL-V2-eAx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fea-3H-tG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3417.5" y="-545.5"/>
+            <point key="canvasLocation" x="4588" y="-539"/>
+        </scene>
+        <!--Foto View Controller-->
+        <scene sceneID="QwX-9b-JzA">
+            <objects>
+                <viewController id="BdU-bc-TZz" customClass="FotoViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s9r-LQ-zko"/>
+                        <viewControllerLayoutGuide type="bottom" id="J3n-m1-CbF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Soi-pZ-mEM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padrao" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-PB-woA">
+                                <rect key="frame" x="67" y="104" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="OST-Nh-SKt"/>
+                                    <constraint firstAttribute="height" constant="128" id="b9d-30-Fcv"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHU-ex-3g9">
+                                <rect key="frame" x="67" y="275" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFE-IU-utb">
+                                <rect key="frame" x="127" y="337" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.55294117649999996" green="0.36862745099999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="bhU-bX-5be"/>
+                                    <constraint firstAttribute="height" constant="40" id="wWn-hh-fX0"/>
+                                </constraints>
+                                <state key="normal" title="Próximo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="criarConta:" destination="Ajm-f6-aEt" eventType="touchUpInside" id="5ww-EB-vDV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dFE-IU-utb" firstAttribute="top" secondItem="mHU-ex-3g9" secondAttribute="bottom" constant="32" id="0Li-pN-7rI"/>
+                            <constraint firstItem="dFE-IU-utb" firstAttribute="centerX" secondItem="mHU-ex-3g9" secondAttribute="centerX" id="5s2-A7-TmL"/>
+                            <constraint firstItem="mHU-ex-3g9" firstAttribute="centerX" secondItem="B1H-PB-woA" secondAttribute="centerX" id="78n-DO-70G"/>
+                            <constraint firstItem="mHU-ex-3g9" firstAttribute="top" secondItem="B1H-PB-woA" secondAttribute="bottom" constant="43" id="8nJ-Gi-lcN"/>
+                            <constraint firstItem="mHU-ex-3g9" firstAttribute="width" secondItem="B1H-PB-woA" secondAttribute="width" id="DaQ-3V-1KX"/>
+                            <constraint firstItem="B1H-PB-woA" firstAttribute="centerX" secondItem="Soi-pZ-mEM" secondAttribute="centerX" id="MJx-f4-A4P"/>
+                            <constraint firstItem="B1H-PB-woA" firstAttribute="top" secondItem="s9r-LQ-zko" secondAttribute="bottom" constant="40" id="pAn-6u-eBr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t8s-Jk-BBC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="qMa-wl-QFm"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b38-L5-ERh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5372" y="-532.0839580209896"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3vM-Iw-2mm">
@@ -311,11 +373,30 @@
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="-561.76911544227892"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wah-LG-Ncf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yl6-oJ-ac6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Am-Tf-HAM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eDN-F1-2KG" kind="relationship" relationship="rootViewController" id="uPS-Sx-G2o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTJ-4u-Tig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3416.8000000000002" y="-545.57721139430294"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="200" height="200"/>
+        <image name="padrao" width="500" height="446"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7G8-gv-9jz"/>
+        <segue reference="Whs-8C-Snw"/>
     </inferredMetricsTieBreakers>
 </document>
