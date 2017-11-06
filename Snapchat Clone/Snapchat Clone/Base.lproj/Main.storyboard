@@ -314,7 +314,7 @@
             </objects>
             <point key="canvasLocation" x="4588" y="-539"/>
         </scene>
-        <!--Foto View Controller-->
+        <!--Foto-->
         <scene sceneID="QwX-9b-JzA">
             <objects>
                 <viewController id="BdU-bc-TZz" customClass="FotoViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
@@ -366,7 +366,7 @@
                             <constraint firstItem="B1H-PB-woA" firstAttribute="top" secondItem="s9r-LQ-zko" secondAttribute="bottom" constant="40" id="pAn-6u-eBr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t8s-Jk-BBC">
+                    <navigationItem key="navigationItem" title="Foto" id="t8s-Jk-BBC">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="qMa-wl-QFm">
                             <connections>
                                 <action selector="selecionarFoto:" destination="BdU-bc-TZz" id="O47-Fb-X8u"/>
@@ -377,11 +377,40 @@
                         <outlet property="descricaoText" destination="mHU-ex-3g9" id="nd9-pI-yI2"/>
                         <outlet property="fotoImageView" destination="B1H-PB-woA" id="oXN-Pq-l3N"/>
                         <outlet property="proximoButton" destination="dFE-IU-utb" id="y1i-OD-uR7"/>
+                        <segue destination="3ap-bf-aTC" kind="show" identifier="selecaoUsuarioSegue" id="WNy-9e-Umf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b38-L5-ERh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5372" y="-532.0839580209896"/>
+        </scene>
+        <!--Usuarios Table View Controller-->
+        <scene sceneID="dtj-lq-hKU">
+            <objects>
+                <tableViewController id="3ap-bf-aTC" customClass="UsuariosTableViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ka5-rN-7Bd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="UpX-e1-5cB">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UpX-e1-5cB" id="SMd-Xz-kzk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3ap-bf-aTC" id="WnO-2a-1MZ"/>
+                            <outlet property="delegate" destination="3ap-bf-aTC" id="8Gd-4w-IWz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5K-ZI-oOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6162" y="-533"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3vM-Iw-2mm">

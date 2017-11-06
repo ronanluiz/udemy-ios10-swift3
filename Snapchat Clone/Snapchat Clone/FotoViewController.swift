@@ -42,7 +42,9 @@ class FotoViewController: BaseViewController, UIImagePickerControllerDelegate, U
            let imagemDados = UIImageJPEGRepresentation(imagemSelecionada, qualidadeImagem) {
             imagensPasta.child("\(idImagem).jpg").putData(imagemDados, metadata: nil, completion: { (metaDados, erro) in
                 if erro == nil {
-                    print(metaDados?.downloadURL()?.absoluteURL)
+                    let url = metaDados?.downloadURL()?.absoluteURL
+                    
+                    self.performSegue(withIdentifier: "selecaoUsuarioSegue", sender: url)
                     
                 } else {
                     let alerta = Alerta(titulo: "Upload", mensagem: "Erro ao realizar o upload das imagens.")

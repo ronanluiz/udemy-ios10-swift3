@@ -7,46 +7,37 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class UsuariosTableViewController: UITableViewController {
 
+    var usuariosCadastrados: [Usuario] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        carregarDados()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return usuariosCadastrados.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
+        let usuario = self.usuariosCadastrados[indexPath.row]
+        
+        celula.textLabel?.text = usuario.nome
+        
+        return celula
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -91,5 +82,16 @@ class UsuariosTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    private func carregarDados() {
+        let database = Database.database().reference()
+        let usuarios = database.child("usuarios")
+        usuarios.observe(DataEventType.childAdded, with: { (snapshot) in
+            
+            let usuario = Usuario.parse(snapshot: snapshot)
+            self.usuariosCadastrados.append(usuario)
+            
+            self.tableView.reloadData()
+        })
+    }
 }
