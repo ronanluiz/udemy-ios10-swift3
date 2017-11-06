@@ -26,6 +26,14 @@ class FotoViewController: BaseViewController, UIImagePickerControllerDelegate, U
         desabilitarProximo()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selecaoUsuarioSegue",
+           let vc = segue.destination as? UsuariosTableViewController,
+           let url = sender as? URL {
+            vc.foto = Foto(descricao: self.descricaoText.text!, urlImagem: url.absoluteString, idImagem: self.idImagem)
+        }
+    }
+    
     @IBAction func selecionarFoto(_ sender: Any) {
         
         imagePicker.sourceType = .savedPhotosAlbum

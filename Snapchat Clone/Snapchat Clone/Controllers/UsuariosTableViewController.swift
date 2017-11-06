@@ -8,10 +8,13 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class UsuariosTableViewController: UITableViewController {
 
     var usuariosCadastrados: [Usuario] = []
+    var foto: Foto!
+    let database = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +37,42 @@ class UsuariosTableViewController: UITableViewController {
         let usuario = self.usuariosCadastrados[indexPath.row]
         
         celula.textLabel?.text = usuario.nome
+        celula.detailTextLabel?.text = usuario.email
         
         return celula
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let usuarioSelecionado = usuariosCadastrados[indexPath.row]
+        let idUsuarioSelecionado = usuarioSelecionado.uid
+        
+        // Estruturar o banco de dados para salvar os dados
+        let database = Database.database().reference()
+        let usuarios = database.child("usuarios")
+        let snaps = usuarios.child(idUsuarioSelecionado).child("snaps")
+        
+        // recupera dados do usuário logado
+        let autenticacao = Auth.auth()
+        if let idUsuarioLogado = autenticacao.currentUser?.uid {
+            // recupera dados do usuário no banco de dados
+            let usuario = database.child("usuarios").child(idUsuarioLogado)
+            usuario.observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
+                let usuarioLogado = Usuario.parse(snapshot: snapshot)
+                
+                // Dicionario com dados do snap
+                let snap = [
+                    "de": usuarioLogado.email,
+                    "nome": usuarioLogado.nome,
+                    "descricao": self.foto.descricao,
+                    "urlImagem": self.foto.urlImagem,
+                    "idImagem": self.foto.idImagem
+                ]
+                
+                // Salvando o snap com id gerado automaticamente
+                snaps.childByAutoId().setValue(snap)
+
+            })
+        }
     }
     
     /*
@@ -84,7 +121,6 @@ class UsuariosTableViewController: UITableViewController {
     */
     
     private func carregarDados() {
-        let database = Database.database().reference()
         let usuarios = database.child("usuarios")
         usuarios.observe(DataEventType.childAdded, with: { (snapshot) in
             
