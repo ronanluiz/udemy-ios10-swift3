@@ -12,6 +12,7 @@
 		341366ED1F4666770022ABED /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341366EC1F4666770022ABED /* PrincipalViewController.swift */; };
 		341366EF1F466E930022ABED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 341366EE1F466E930022ABED /* GoogleService-Info.plist */; };
 		3417F21D1FA28B26003C224B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417F21C1FA28B26003C224B /* Alerta.swift */; };
+		343A15E71FC78A21007645D7 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A15E61FC78A21007645D7 /* Snap.swift */; };
 		348AF2FF1FA1661000B91856 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AF2FE1FA1661000B91856 /* SnapsViewController.swift */; };
 		348AF3031FA169A900B91856 /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AF3021FA169A900B91856 /* FotoViewController.swift */; };
 		34940CC91FAF55FD009AB234 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34940CC81FAF55FD009AB234 /* Usuario.swift */; };
@@ -33,6 +34,7 @@
 		341366EC1F4666770022ABED /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrincipalViewController.swift; path = ../PrincipalViewController.swift; sourceTree = "<group>"; };
 		341366EE1F466E930022ABED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3417F21C1FA28B26003C224B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		343A15E61FC78A21007645D7 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		348AF2FE1FA1661000B91856 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = ../SnapsViewController.swift; sourceTree = "<group>"; };
 		348AF3021FA169A900B91856 /* FotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FotoViewController.swift; path = ../FotoViewController.swift; sourceTree = "<group>"; };
 		34940CC81FAF55FD009AB234 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				3417F21C1FA28B26003C224B /* Alerta.swift */,
 				34940CC81FAF55FD009AB234 /* Usuario.swift */,
 				34940CDD1FB10A72009AB234 /* Foto.swift */,
+				343A15E61FC78A21007645D7 /* Snap.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				34FC0F041F45308000C888BB /* AppDelegate.swift in Sources */,
 				34A01B771F85CC82003A2B45 /* BaseViewController.swift in Sources */,
 				341366E91F4665AE0022ABED /* CadastroViewController.swift in Sources */,
+				343A15E71FC78A21007645D7 /* Snap.swift in Sources */,
 				34940CCB1FAFA161009AB234 /* UsuariosTableViewController.swift in Sources */,
 				34940CC91FAF55FD009AB234 /* Usuario.swift in Sources */,
 			);

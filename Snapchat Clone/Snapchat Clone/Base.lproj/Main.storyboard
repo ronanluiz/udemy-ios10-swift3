@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ayb-Tf-Q7e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ayb-Tf-Q7e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -287,7 +287,7 @@
         <!--Snaps-->
         <scene sceneID="Bhu-xm-vTb">
             <objects>
-                <viewController id="eDN-F1-2KG" customClass="SnapsViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eDN-F1-2KG" customClass="SnapsViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IOq-8O-als"/>
                         <viewControllerLayoutGuide type="bottom" id="c0t-DC-VEj"/>
@@ -295,7 +295,33 @@
                     <view key="view" contentMode="scaleToFill" id="n8I-H4-cEG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HWx-xe-Bbc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="f5I-9T-p9H">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f5I-9T-p9H" id="NGd-eC-Abk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eDN-F1-2KG" id="IkB-F5-lra"/>
+                                    <outlet property="delegate" destination="eDN-F1-2KG" id="mTb-Bu-4Oc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HWx-xe-Bbc" secondAttribute="trailing" id="IwR-6G-wxm"/>
+                            <constraint firstItem="c0t-DC-VEj" firstAttribute="top" secondItem="HWx-xe-Bbc" secondAttribute="bottom" id="KnM-lV-cul"/>
+                            <constraint firstItem="HWx-xe-Bbc" firstAttribute="top" secondItem="IOq-8O-als" secondAttribute="bottom" id="P0R-NH-Qp1"/>
+                            <constraint firstItem="HWx-xe-Bbc" firstAttribute="leading" secondItem="n8I-H4-cEG" secondAttribute="leading" id="sZg-VA-ixJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Snaps" id="MmA-Id-rCD">
                         <barButtonItem key="leftBarButtonItem" title="Sair" id="575-Ls-xHK">
@@ -309,6 +335,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="HWx-xe-Bbc" id="k4I-qe-cax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fea-3H-tG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
