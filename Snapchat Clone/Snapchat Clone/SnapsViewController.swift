@@ -19,6 +19,14 @@ class SnapsViewController: BaseViewController {
         carregarDados()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detalheSnapSegue",
+           let vc = segue.destination as? DetalhesSnapViewController,
+           let snap = sender as? Snap {
+            vc.snap = snap
+        }
+    }
+    
     @IBAction func sair(_ sender: UIBarButtonItem) {
         let autenticacao = Auth.auth()
         do {
@@ -44,6 +52,8 @@ class SnapsViewController: BaseViewController {
             })
         }
     }
+    
+    
 }
 
 extension SnapsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -69,5 +79,12 @@ extension SnapsViewController: UITableViewDelegate, UITableViewDataSource {
             celula.textLabel?.text = model.nome
         }
         return celula
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if snaps.count > 0 {
+            let snap = snaps[indexPath.row]
+            performSegue(withIdentifier: "detalheSnapSegue", sender: snap)
+        }
     }
 }

@@ -11,6 +11,7 @@
 		341366EB1F4665F50022ABED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341366EA1F4665F50022ABED /* HomeViewController.swift */; };
 		341366ED1F4666770022ABED /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341366EC1F4666770022ABED /* PrincipalViewController.swift */; };
 		341366EF1F466E930022ABED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 341366EE1F466E930022ABED /* GoogleService-Info.plist */; };
+		3413A0D81FC7992B00F1BF0F /* DetalhesSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3413A0D71FC7992B00F1BF0F /* DetalhesSnapViewController.swift */; };
 		3417F21D1FA28B26003C224B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417F21C1FA28B26003C224B /* Alerta.swift */; };
 		343A15E71FC78A21007645D7 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A15E61FC78A21007645D7 /* Snap.swift */; };
 		348AF2FF1FA1661000B91856 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AF2FE1FA1661000B91856 /* SnapsViewController.swift */; };
@@ -33,6 +34,7 @@
 		341366EA1F4665F50022ABED /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		341366EC1F4666770022ABED /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrincipalViewController.swift; path = ../PrincipalViewController.swift; sourceTree = "<group>"; };
 		341366EE1F466E930022ABED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3413A0D71FC7992B00F1BF0F /* DetalhesSnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesSnapViewController.swift; sourceTree = "<group>"; };
 		3417F21C1FA28B26003C224B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		343A15E61FC78A21007645D7 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		348AF2FE1FA1661000B91856 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = ../SnapsViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				348AF2FE1FA1661000B91856 /* SnapsViewController.swift */,
 				34A01B761F85CC82003A2B45 /* BaseViewController.swift */,
 				34940CCA1FAFA161009AB234 /* UsuariosTableViewController.swift */,
+				3413A0D71FC7992B00F1BF0F /* DetalhesSnapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,11 +260,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Snapchat Clone/Pods-Snapchat Clone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -280,6 +285,7 @@
 				34FC0F161F45314B00C888BB /* LoginViewController.swift in Sources */,
 				34FC0F061F45308000C888BB /* ViewController.swift in Sources */,
 				348AF3031FA169A900B91856 /* FotoViewController.swift in Sources */,
+				3413A0D81FC7992B00F1BF0F /* DetalhesSnapViewController.swift in Sources */,
 				341366ED1F4666770022ABED /* PrincipalViewController.swift in Sources */,
 				34940CDE1FB10A72009AB234 /* Foto.swift in Sources */,
 				3417F21D1FA28B26003C224B /* Alerta.swift in Sources */,

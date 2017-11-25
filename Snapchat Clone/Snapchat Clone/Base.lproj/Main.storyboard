@@ -337,11 +337,68 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="HWx-xe-Bbc" id="k4I-qe-cax"/>
+                        <segue destination="GMH-VH-SW1" kind="show" identifier="detalheSnapSegue" id="XfW-Hq-MAV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fea-3H-tG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4588" y="-539"/>
+        </scene>
+        <!--Detalhes Snap View Controller-->
+        <scene sceneID="mOg-Z2-NjN">
+            <objects>
+                <viewController id="GMH-VH-SW1" customClass="DetalhesSnapViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XPJ-nH-p4j"/>
+                        <viewControllerLayoutGuide type="bottom" id="9R9-3N-96I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ogZ-tj-3RW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-Uh-mCx">
+                                <rect key="frame" x="16" y="20" width="343" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Hco-xx-FJC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-VS-h51">
+                                <rect key="frame" x="16" y="268" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWY-sd-waa">
+                                <rect key="frame" x="16" y="507.5" width="343" height="143.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RWY-sd-waa" firstAttribute="trailing" secondItem="ogZ-tj-3RW" secondAttribute="trailingMargin" id="4Ub-tQ-gxa"/>
+                            <constraint firstItem="Aq7-Uh-mCx" firstAttribute="centerX" secondItem="ogZ-tj-3RW" secondAttribute="centerX" id="ALu-xc-yTA"/>
+                            <constraint firstItem="Aq7-Uh-mCx" firstAttribute="leading" secondItem="RWY-sd-waa" secondAttribute="leading" id="EZf-DQ-Vro"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JIr-VS-h51" secondAttribute="trailing" id="Khl-J0-U61"/>
+                            <constraint firstItem="RWY-sd-waa" firstAttribute="leading" secondItem="ogZ-tj-3RW" secondAttribute="leadingMargin" id="MOJ-Ao-uSQ"/>
+                            <constraint firstItem="Aq7-Uh-mCx" firstAttribute="trailing" secondItem="RWY-sd-waa" secondAttribute="trailing" id="Uq7-fd-lrc"/>
+                            <constraint firstItem="JIr-VS-h51" firstAttribute="top" secondItem="Aq7-Uh-mCx" secondAttribute="bottom" constant="8" id="X0E-eD-flC"/>
+                            <constraint firstItem="Aq7-Uh-mCx" firstAttribute="top" secondItem="XPJ-nH-p4j" secondAttribute="bottom" id="cXk-vn-kTZ"/>
+                            <constraint firstItem="Aq7-Uh-mCx" firstAttribute="leading" secondItem="JIr-VS-h51" secondAttribute="leading" id="iQ8-TA-JNI"/>
+                            <constraint firstItem="JIr-VS-h51" firstAttribute="leading" secondItem="ogZ-tj-3RW" secondAttribute="leadingMargin" id="icv-uC-C4G"/>
+                            <constraint firstItem="9R9-3N-96I" firstAttribute="top" secondItem="RWY-sd-waa" secondAttribute="bottom" constant="16" id="kVx-FB-1Mk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contadorLabel" destination="RWY-sd-waa" id="9Ev-dX-hSu"/>
+                        <outlet property="descricaoLabel" destination="JIr-VS-h51" id="H8D-J1-x5g"/>
+                        <outlet property="fotoImageView" destination="Aq7-Uh-mCx" id="kqa-1v-n0z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kE-Pd-xvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4588" y="242"/>
         </scene>
         <!--Foto-->
         <scene sceneID="QwX-9b-JzA">
