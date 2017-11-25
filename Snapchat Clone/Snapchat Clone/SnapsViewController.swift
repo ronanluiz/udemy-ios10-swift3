@@ -18,7 +18,7 @@ class SnapsViewController: BaseViewController {
         super.viewDidLoad()
         carregarDados()
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detalheSnapSegue",
            let vc = segue.destination as? DetalhesSnapViewController,
@@ -48,6 +48,15 @@ class SnapsViewController: BaseViewController {
                 
                 let snap = Snap.parse(snapshot: snapshot)
                 self.snaps.append(snap)
+                self.tableView.reloadData()
+            })
+            
+            // Evento para quando os itens foram removidos
+            snapsDb.observe(DataEventType.childRemoved, with: { (snapshot) in
+                // filtra o item no array
+                let snapsAtualizados = self.snaps.filter { $0.identificador != snapshot.key }
+                self.snaps = snapsAtualizados
+                
                 self.tableView.reloadData()
             })
         }

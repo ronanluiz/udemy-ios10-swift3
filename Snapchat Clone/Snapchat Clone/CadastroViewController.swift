@@ -28,6 +28,11 @@ class CadastroViewController: BaseViewController {
         navigationController?.setToolbarHidden(false, animated: false)
     }
     
+    // força a exibição/ocultação do teclado
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func criarConta(_ sender: Any) {
         
         if let email = email.text,

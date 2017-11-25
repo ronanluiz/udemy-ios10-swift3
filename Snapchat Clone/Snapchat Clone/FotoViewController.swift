@@ -34,6 +34,11 @@ class FotoViewController: BaseViewController, UIImagePickerControllerDelegate, U
         }
     }
     
+    // força a exibição/ocultação do teclado 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func selecionarFoto(_ sender: Any) {
         
         imagePicker.sourceType = .savedPhotosAlbum
